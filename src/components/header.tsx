@@ -8,7 +8,7 @@ export default function Header({
   initialFillIsDone: boolean;
   fillStateHook: any;
 }) {
-  const [spotify, setSpotify] = useState(null);
+  const [spotify, setSpotify] = useState({} as any);
   const [discord, setDiscord] = useState("loading...");
 
   if (!initialFillIsDone) {
