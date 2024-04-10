@@ -27,7 +27,7 @@ export default function Header({
     });
   }, 10000);
 
-  const statusKey = {
+  const statusKey: any = {
     online: "Online",
     idle: "Idle",
     dnd: "Do Not Disturb",
