@@ -2,32 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: "Recia Regular";
+    src:
+        url("../assets/font/Recia-Regular.woff") format("woff"),
+        url("../assets/font/Recia-Regular.woff2") format("woff2");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+    font-family: "Recia Semi";
+    src:
+        url("../assets/font/Recia-Semibold.woff") format("woff"),
+        url("../assets/font/Recia-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Recia Italic";
+    src:
+        url("../assets/font/Recia-Italic.woff") format("woff"),
+        url("../assets/font/Recia-Italic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Recia Italic Semi";
+    src:
+        url("../assets/font/Recia-SemiboldItalic.woff") format("woff"),
+        url("../assets/font/Recia-SemiboldItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url("../assets/font/SpaceGrotesk-VariableFont_wght.ttf")
+        format("truetype");
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url("../assets/font/GeneralSans-Variable.woff") format("woff");
+}
+
+html {
+    @apply bg-blue-50;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: black;
+}
+
+h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+h3 {
+    font-family: "Recia Semi", sans-serif;
+    font-size: 24px;
+    opacity: 80%;
+}
+
+h4 {
+    font-family: "Recia Semi", sans-serif;
+    font-size: 20px;
+}
+
+h5 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+p {
+    font-family: "Recia Regular", sans-serif;
+    font-size: 18px;
+    opacity: 75%;
+}
+
+button {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
