@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         initialFillIsDone={initialFillIsDone}
         fillStateHook={setInitialFillDone}
       />
-      <div className="selection:bg-blue-500 selection:text-white mx-auto max-w-[1000px] mt-10">
+      <div className="selection:bg-blue-500 selection:text-white min-h-screen mx-auto max-w-[1000px] mt-10">
         <Component {...pageProps} />
       </div>
       <footer>

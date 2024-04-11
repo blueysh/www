@@ -1,4 +1,5 @@
 import { PrimaryButton, SecondaryButton } from "@/components/button";
+import Card from "@/components/card";
 
 export default function Home() {
   return (
@@ -33,7 +34,10 @@ export default function Home() {
         </p>
 
         <SecondaryButton
-          onClick={() => (location.href = "https://l.blueysh.me/resume")}
+          onClick={() =>
+            (location.href =
+              "https://docs.google.com/document/d/1j_YhXF5yLhxiFF_Lwn8XLtuG-ICpA4aMYq1ijTe7pPY/edit?usp=sharing")
+          }
         >
           Open Resume ↗
         </SecondaryButton>
@@ -72,7 +76,47 @@ export default function Home() {
       </section>
       <section className="p-5">
         <h3>Projects</h3>
-        <p className="italic">I&apos;m still filling this section out!</p>
+        <div className="flex flex-row space-x-2">
+          <Card>
+            <h5 className="text-center text-2xl">discord.jar</h5>
+            <hr className="my-2" />
+            <p>
+              A work-in-progress Java library for developing Discord
+              applications.
+            </p>
+            <PrimaryButton
+              onClick={() =>
+                (location.href = "https://github.com/discord-jar/discord.jar")
+              }
+            >
+              See on GitHub
+            </PrimaryButton>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">sap4j</h5>
+            <hr className="my-2" />
+            <p>A simple Java library for parsing command-line arguments.</p>
+            <PrimaryButton
+              onClick={() =>
+                (location.href = "https://github.com/blueysh/sap4j")
+              }
+            >
+              See on GitHub
+            </PrimaryButton>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">lineman</h5>
+            <hr className="my-2" />
+            <p>A simple Java library for building CLI tools.</p>
+            <PrimaryButton
+              onClick={() =>
+                (location.href = "https://github.com/blueysh/linemans")
+              }
+            >
+              See on GitHub
+            </PrimaryButton>
+          </Card>
+        </div>
       </section>
     </main>
   );

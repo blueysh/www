@@ -37,15 +37,20 @@ export default function Header({
   return (
     <div className="bg-blue-600 text-white text-center p-2 px-5">
       <code>
-        Status: <strong>{statusKey[discord]}</strong> |{" "}
+        Status: <strong className="animate-pulse">{statusKey[discord]}</strong>{" "}
+        |{" "}
       </code>
       {spotify ? (
         <code>
           Listening to <strong className="italic">{spotify.song}</strong> by{" "}
-          <strong className="italic">{spotify.artist}</strong>
+          <strong className="italic">
+            {spotify.artist && spotify.artist.split("; ").length >= 3
+              ? `${spotify.artist.split("; ")[0]} and others`
+              : spotify.artist}
+          </strong>
           <a
             href={`https://open.spotify.com/track/${spotify.track_id}`}
-            className="mx-5 underline underline-offset-2"
+            className="mx-5 underline underline-offset-2 active:opacity-50 hover:opacity-75"
           >
             Play ↗
           </a>
