@@ -76,11 +76,14 @@ export default function Home() {
       </section>
       <section className="p-5">
         <h3>Projects</h3>
-        <div className="flex flex-row space-x-2">
+        <div className="flex flex-row space-x-2 overflow-x-scroll">
           <Card>
             <h5 className="text-center text-2xl">discord.jar</h5>
+            <h5 className="text-center uppercase opacity-75 text-lg">
+              Contributor
+            </h5>
             <hr className="my-2" />
-            <p>
+            <p className="my-auto">
               A work-in-progress Java library for developing Discord
               applications.
             </p>
@@ -94,8 +97,13 @@ export default function Home() {
           </Card>
           <Card>
             <h5 className="text-center text-2xl">sap4j</h5>
+            <h5 className="text-center uppercase opacity-75 text-lg">
+              Maintainer
+            </h5>
             <hr className="my-2" />
-            <p>A simple Java library for parsing command-line arguments.</p>
+            <p className="my-auto">
+              A simple Java library for parsing command-line arguments.
+            </p>
             <PrimaryButton
               onClick={() =>
                 (location.href = "https://github.com/blueysh/sap4j")
@@ -106,11 +114,16 @@ export default function Home() {
           </Card>
           <Card>
             <h5 className="text-center text-2xl">lineman</h5>
+            <h5 className="text-center uppercase opacity-75 text-lg">
+              Maintainer
+            </h5>
             <hr className="my-2" />
-            <p>A simple Java library for building CLI tools.</p>
+            <p className="my-auto">
+              A simple Java library for building CLI tools.
+            </p>
             <PrimaryButton
               onClick={() =>
-                (location.href = "https://github.com/blueysh/linemans")
+                (location.href = "https://github.com/blueysh/lineman")
               }
             >
               See on GitHub
