@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import { TrafficLight } from "@/lib/trafficlight";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -7,8 +8,10 @@ import { useState } from "react";
 export default function App({ Component, pageProps }: AppProps) {
   const [initialFillIsDone, setInitialFillDone] = useState(false);
 
+  const trafficlight: TrafficLight = new TrafficLight();
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="antialiased" suppressHydrationWarning>
       <Head>
         <title>Jan Santiago</title>
         <link
@@ -20,6 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Header
         initialFillIsDone={initialFillIsDone}
         fillStateHook={setInitialFillDone}
+        trafficlight={trafficlight}
       />
       <div className="selection:bg-blue-500 selection:text-white min-h-screen mx-auto max-w-[1000px] mt-10">
         <Component {...pageProps} />

@@ -9,6 +9,10 @@ const sections = [
     title: "Part 2: Character Creation",
     href: "/portfolios/pca/2",
   },
+  {
+    title: "Part 3: Storyboarding",
+    href: "/portfolios/pca/3",
+  },
 ];
 
 export default function Page() {

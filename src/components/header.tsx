@@ -1,12 +1,15 @@
 import { getLanyard } from "@/lib/discord";
+import { TrafficLight } from "@/lib/trafficlight";
 import { useState } from "react";
 
 export default function Header({
   initialFillIsDone,
   fillStateHook,
+  trafficlight,
 }: {
   initialFillIsDone: boolean;
   fillStateHook: any;
+  trafficlight: TrafficLight;
 }) {
   const [spotify, setSpotify] = useState({} as any);
   const [discord, setDiscord] = useState("loading...");
@@ -21,9 +24,11 @@ export default function Header({
   }
 
   setTimeout(() => {
-    getLanyard().then((data) => {
-      setSpotify(data.data.spotify);
-      setDiscord(data.data.discord_status);
+    trafficlight.attempt(() => {
+      getLanyard().then((data) => {
+        setSpotify(data.data.spotify);
+        setDiscord(data.data.discord_status);
+      });
     });
   }, 10000);
 
@@ -35,14 +40,20 @@ export default function Header({
   };
 
   return (
-    <div className="bg-blue-600 text-white text-center p-2 px-5">
+    <div className="bg-blue-600 text-white text-center p-2 px-5 sticky top-0 z-[99]">
       <code>
         Status: <strong className="animate-pulse">{statusKey[discord]}</strong>{" "}
         |{" "}
       </code>
       {spotify ? (
         <code>
-          Listening to <strong className="italic">{spotify.song}</strong> by{" "}
+          Listening to{" "}
+          <strong className="italic">
+            {spotify.song && spotify.song.split(" (").length > 0
+              ? spotify.song.split(" (")[0]
+              : spotify.song}
+          </strong>{" "}
+          by{" "}
           <strong className="italic">
             {spotify.artist && spotify.artist.split("; ").length >= 3
               ? `${spotify.artist.split("; ")[0]} and others`
