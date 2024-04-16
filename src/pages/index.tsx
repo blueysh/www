@@ -8,18 +8,19 @@ export default function Home() {
         <span className="flex flex-row space-x-2">
           <img
             src="https://pbs.twimg.com/profile_images/1771200275203715072/_VWQfbuN_400x400.jpg"
-            height={64}
-            width={64}
-            alt="hi :)"
-            className="rounded-full scale-75 text-center bg-neutral-600 text-white"
+            alt="pfp"
+            className="rounded-full scale-75 text-center bg-blue-600 text-white w-[96px] h-[96px] border-4 border-blue-500 shadow-2xl active:rotate-[-15deg] transition-all duration-100"
           />
-          <h2 className="my-auto">Jan Santiago</h2>
+          <div className="flex flex-col mb-5">
+            <h2 className="my-auto pt-[5px]">Jan Santiago</h2>
+            <h4 className="opacity-80 text-md">Computer Science Student</h4>
+          </div>
         </span>
         <p className="max-w-[600px] mb-2">
-          I&apos;m a full-stack developer based in the United States. Right now,
-          I&apos;m a student at Newton College & Career Academy in the Computer
+          I&apos;m a full-stack developer based in the United States. I&apos;m
+          currently a student at Newton College & Career Academy in the Computer
           Science pathway. My goal is to build valuable experiences for people
-          through software.
+          through intuitive software.
         </p>
         <p className="max-w-[600px] mb-2">
           For frontend, I use Next.js and Tailwind. For backend, I typically use
@@ -29,8 +30,8 @@ export default function Home() {
         <p className="max-w-[600px] mb-2">
           Outside of coding, I work at Chick-fil-A as a Team Captain. I&apos;ve
           been working there for over a year now. I&apos;ve learned a lot about
-          leadership and teamwork. For fun, I like to play video games and
-          listen to music (I play piano too).
+          leadership and teamwork. For fun, I like to play video games, spend
+          time with friends, and listen to music (I play piano too).
         </p>
 
         <SecondaryButton
