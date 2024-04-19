@@ -75,6 +75,7 @@ export default function Home() {
           </a>
         </p>
       </section>
+
       <section className="p-5">
         <h3>Projects</h3>
         <div className="flex flex-row space-x-2 overflow-x-scroll">
@@ -120,7 +121,7 @@ export default function Home() {
             </h5>
             <hr className="my-2" />
             <p className="my-auto">
-              A simple Java library for building CLI tools.
+              A simple Java library for building command line tools.
             </p>
             <PrimaryButton
               onClick={() =>
@@ -129,6 +130,26 @@ export default function Home() {
             >
               See on GitHub
             </PrimaryButton>
+          </Card>
+        </div>
+      </section>
+
+      <section className="p-5">
+        <h3>Highlights</h3>
+        <div className="flex flex-row space-x-2 overflow-x-scroll">
+          <Card>
+            <h5 className="text-center text-2xl">
+              National Hispanic Recognition Program Scholar
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto">Awarded August 1, 2023 by College Board</p>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">
+              Congressional App Challenge Participant
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto">2023-2024 School Year</p>
           </Card>
         </div>
       </section>
