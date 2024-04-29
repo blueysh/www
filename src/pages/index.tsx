@@ -9,29 +9,29 @@ export default function Home() {
           <img
             src="https://pbs.twimg.com/profile_images/1771200275203715072/_VWQfbuN_400x400.jpg"
             alt="pfp"
-            className="rounded-full scale-75 text-center bg-blue-600 text-white w-[96px] h-[96px] border-4 border-blue-500 shadow-2xl active:rotate-[-15deg] transition-all duration-100"
+            className="rounded-full scale-[80%] text-center bg-blue-600 text-white w-[96px] h-[96px] border-4 border-blue-500 shadow-2xl hover:rotate-[-10deg] transition-all duration-100"
           />
           <div className="flex flex-col mb-5">
-            <h2 className="my-auto pt-[5px]">Jan Santiago</h2>
-            <h4 className="opacity-80 text-md">Computer Science Student</h4>
+            <h2 className="my-auto pt-[5px]">Jan Santiago 🇵🇷</h2>
+            <h4 className="opacity-80 text-md">cs student, class of 2025</h4>
           </div>
         </span>
         <p className="max-w-[600px] mb-2">
-          I&apos;m a full-stack developer based in the United States. I&apos;m
+          i&apos;m a full-stack developer based in the united states. i&apos;m
           currently a student at Newton College & Career Academy in the Computer
-          Science pathway. My goal is to build valuable experiences for people
+          Science pathway. my goal is to build valuable experiences for people
           through intuitive software.
         </p>
         <p className="max-w-[600px] mb-2">
-          For frontend, I use Next.js and Tailwind. For backend, I typically use
-          Spring with Java but am learning Nest.js. I&apos;m always looking to
+          for frontend, i use Next.js and Tailwind. for backend, i typically use
+          Spring with Java but am learning Nest.js. i&apos;m always looking to
           learn new things and improve my skills.
         </p>
         <p className="max-w-[600px] mb-2">
-          Outside of coding, I work at Chick-fil-A as a Team Captain. I&apos;ve
-          been working there for over a year now. I&apos;ve learned a lot about
-          leadership and teamwork. For fun, I like to play video games, spend
-          time with friends, and listen to music (I play piano too).
+          outside of coding, i work at Chick-fil-A as a Team Captain. i&apos;ve
+          been working there for over a year now and have learned a lot about
+          leadership and teamwork. for fun, i like to play video games, spend
+          time with friends, and listen to music (i play piano too).
         </p>
 
         <SecondaryButton
@@ -50,28 +50,28 @@ export default function Home() {
             href="https://github.com/blueysh"
             className="underline underline-offset-4"
           >
-            GitHub
+            github
           </a>{" "}
           |{" "}
           <a
             href="https://discord.com/users/594576995090956313"
             className="underline underline-offset-4"
           >
-            Discord
+            discord
           </a>{" "}
           |{" "}
           <a
             href="https://x.com/blueysh_"
             className="underline underline-offset-4"
           >
-            X
+            x
           </a>{" "}
           |{" "}
           <a
             href="mailto:hi@blueysh.me"
             className="underline underline-offset-4"
           >
-            Email
+            email
           </a>
         </p>
       </section>
