@@ -142,14 +142,18 @@ export default function Home() {
               National Hispanic Recognition Program Scholar
             </h5>
             <hr className="my-2" />
-            <p className="my-auto">Awarded August 1, 2023 by College Board</p>
+            <p className="my-auto text-center">
+              Awarded August 1, 2023 by the College Board
+            </p>
           </Card>
           <Card>
             <h5 className="text-center text-2xl">
               Congressional App Challenge Participant
             </h5>
             <hr className="my-2" />
-            <p className="my-auto">2023-2024 School Year</p>
+            <p className="my-auto text-center">
+              Participated during the 2023-2024 School Year
+            </p>
           </Card>
         </div>
       </section>
