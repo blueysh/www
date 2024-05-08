@@ -37,6 +37,10 @@ const sections = [
     title: "Part 9: Reflection",
     href: "/portfolios/pca/9",
   },
+  {
+    title: "Part 10: About (Home Page)",
+    href: "/",
+  },
 ];
 
 export default function Page() {

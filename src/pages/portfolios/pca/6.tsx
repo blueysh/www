@@ -1,3 +1,5 @@
+import { PrimaryButton } from "@/components/button";
+
 export default function Page() {
   return (
     <main>
@@ -18,7 +20,14 @@ export default function Page() {
       <section className="p-5 text-center">
         <h3>Stop Motion Animation</h3>
         <div>
-          <p></p>
+          <PrimaryButton
+            onClick={(e) =>
+              (location.href =
+                "https://drive.google.com/file/d/1G0HtptRhFL33GoEumN83Kn_-8MiR2i3U/view?usp=sharing")
+            }
+          >
+            Click to Download
+          </PrimaryButton>
         </div>
       </section>
     </main>

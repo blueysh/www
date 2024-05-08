@@ -16,8 +16,22 @@ export default function Page() {
       </section>
 
       <section className="p-5 text-center">
-        <h3>No content</h3>
-        <div></div>
+        <h3>Character Intro</h3>
+        <p className="max-w-[500px] mx-auto mb-5">
+          This character&apos;s name is <strong>Josué</strong>. His favorite
+          part of his appearance is his hair, but he is self-conscious about his
+          nose. For fun, he likes to play soccer and video games. Josué is
+          sometimes impulsive, but most of the time he remains reserved and is
+          an overall friendly, thoughtful, and funny person.
+        </p>
+        <p>His portrait is below:</p>
+
+        <img
+          src="https://assets.blueysh.me/Santiago_CharacterCreation.png"
+          className="rounded-lg border-2 border-neutral-600 shadow-2xl mx-auto"
+          height={500}
+          width={500}
+        />
       </section>
     </main>
   );
