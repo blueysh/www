@@ -2,6 +2,10 @@ import { getLanyard } from "@/lib/discord";
 import { TrafficLight } from "@/lib/trafficlight";
 import { useState } from "react";
 
+import { JetBrains_Mono } from "next/font/google";
+
+const font = JetBrains_Mono({ subsets: ["latin"] });
+
 export default function Header({
   initialFillIsDone,
   fillStateHook,
@@ -41,12 +45,12 @@ export default function Header({
 
   return (
     <div className="bg-blue-600 text-white selection:text-black selection:bg-white text-center p-2 px-5 sticky top-0 z-[99]">
-      <code>
+      <code className={font.className}>
         Status: <strong className="animate-pulse">{statusKey[discord]}</strong>{" "}
         |{" "}
       </code>
       {spotify ? (
-        <code>
+        <code className={font.className}>
           Listening to{" "}
           <strong className="italic">
             {spotify.song && spotify.song.split(" (").length > 0
@@ -67,7 +71,7 @@ export default function Header({
           </a>
         </code>
       ) : (
-        <code>Not Listening to Spotify</code>
+        <code className={font.className}>Not Listening to Spotify</code>
       )}
     </div>
   );

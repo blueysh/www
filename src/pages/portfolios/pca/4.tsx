@@ -16,9 +16,12 @@ export default function Page() {
       </section>
 
       <section className="p-5 text-center">
-        <h3>no content</h3>
+        <h3>&quot;Character Animation With Wink And Bounce&quot;</h3>
         <div>
-          <p>no content</p>
+          <img
+            src="https://assets.blueysh.me/CharacterHeadTurnWithWinkAndBounce.gif"
+            className="rounded-lg border-2 border-neutral-600 shadow-2xl"
+          />
         </div>
       </section>
     </main>
