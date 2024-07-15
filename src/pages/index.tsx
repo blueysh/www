@@ -13,31 +13,31 @@ export default function Home() {
           />
           <div className="flex flex-col mb-5">
             <h2 className="my-auto pt-[5px]">Jan Santiago 🇵🇷</h2>
-            <h4 className="opacity-80 text-md">cs student, class of 2025</h4>
+            <h4 className="opacity-80 text-md">CS Student, Class of 2025</h4>
           </div>
         </span>
         <p className="max-w-[600px] mb-2">
-          i&apos;m a full-stack developer based in the united states. i&apos;m
-          currently a student at Newton College & Career Academy in the Computer
-          Science pathway. my goal is to build valuable experiences for people
-          through intuitive software.
+          I&apos;m a Puerto Rican full-stack developer and musician based in the
+          United States. I&apos;m currently a student at Newton College & Career
+          Academy in the Computer Science pathway. My goal is to build valuable
+          experiences for people through intuitive software.
         </p>
         <p className="max-w-[600px] mb-2">
-          for frontend, i use Next.js and Tailwind. for backend, i typically use
-          Spring with Java but am learning Nest.js. i&apos;m always looking to
+          For frontend, I use Next.js and Tailwind. For backend, I typically use
+          Spring with Java but am learning Nest.js. I&apos;m always looking to
           learn new things and improve my skills.
         </p>
         <p className="max-w-[600px] mb-2">
-          outside of coding, i work at Chick-fil-A as a Team Captain. i&apos;ve
+          Outside of coding, I work at Chick-fil-A as a Team Captain. I&apos;ve
           been working there for over a year now and have learned a lot about
-          leadership and teamwork. for fun, i like to play video games, spend
-          time with friends, and listen to music (i play piano too).
+          leadership and teamwork. For fun, I like to play video games, spend
+          time with friends, and listen to music (I play piano too).
         </p>
 
         <SecondaryButton
           onClick={() =>
             (location.href =
-              "https://docs.google.com/document/d/1j_YhXF5yLhxiFF_Lwn8XLtuG-ICpA4aMYq1ijTe7pPY/edit?usp=sharing")
+              "https://docs.google.com/document/d/1QEXFCTEdLbsXSvgLlJ6LAgW--SwMtjUYpzziAngL5nw/edit?usp=sharing")
           }
         >
           Open Resume ↗
@@ -50,34 +50,37 @@ export default function Home() {
             href="https://github.com/blueysh"
             className="underline underline-offset-4"
           >
-            github
+            GitHub
           </a>{" "}
           |{" "}
           <a
             href="https://discord.com/users/594576995090956313"
             className="underline underline-offset-4"
           >
-            discord
+            Discord
           </a>{" "}
           |{" "}
           <a
             href="https://x.com/blueysh_"
             className="underline underline-offset-4"
           >
-            x
+            X
           </a>{" "}
           |{" "}
           <a
             href="mailto:hi@blueysh.me"
             className="underline underline-offset-4"
           >
-            email
+            Email
           </a>
         </p>
       </section>
 
       <section className="p-5">
-        <h3>Projects</h3>
+        <h3>
+          Projects{" "}
+          <span className="opacity-50 text-xl">(scroll left and right)</span>
+        </h3>
         <div className="flex flex-row space-x-2 overflow-x-scroll">
           <Card>
             <h5 className="text-center text-2xl">discord.jar</h5>
@@ -135,7 +138,10 @@ export default function Home() {
       </section>
 
       <section className="p-5">
-        <h3>Highlights</h3>
+        <h3>
+          Highlights &amp; Awards{" "}
+          <span className="opacity-50 text-xl">(scroll left and right)</span>
+        </h3>
         <div className="flex flex-row space-x-2 overflow-x-scroll">
           <Card>
             <h5 className="text-center text-2xl">
@@ -154,6 +160,20 @@ export default function Home() {
             <p className="my-auto text-center">
               Participated during the 2023-2024 School Year
             </p>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">
+              Pennsylvania House of Representatives Leadership Award
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto text-center">Awarded in 2018</p>
+          </Card>
+          <Card>
+            <h5 className="text-center text-2xl">
+              President&apos;s Award for Education Excellence
+            </h5>
+            <hr className="my-2" />
+            <p className="my-auto text-center">Awarded in 2018</p>
           </Card>
         </div>
       </section>

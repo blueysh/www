@@ -1,78 +1,40 @@
-import { getLanyard } from "@/lib/discord";
-import { TrafficLight } from "@/lib/trafficlight";
-import { useState } from "react";
-
 import { JetBrains_Mono } from "next/font/google";
 
 const font = JetBrains_Mono({ subsets: ["latin"] });
 
-export default function Header({
-  initialFillIsDone,
-  fillStateHook,
-  trafficlight,
-}: {
-  initialFillIsDone: boolean;
-  fillStateHook: any;
-  trafficlight: TrafficLight;
-}) {
-  const [spotify, setSpotify] = useState({} as any);
-  const [discord, setDiscord] = useState("loading...");
+export default function Header() {
+  const date: Date = new Date();
 
-  if (!initialFillIsDone) {
-    getLanyard().then((data) => {
-      setSpotify(data.data.spotify);
-      setDiscord(data.data.discord_status);
-
-      fillStateHook(true);
-    });
-  }
-
-  setTimeout(() => {
-    trafficlight.attempt(() => {
-      getLanyard().then((data) => {
-        setSpotify(data.data.spotify);
-        setDiscord(data.data.discord_status);
-      });
-    });
-  }, 10000);
-
-  const statusKey: any = {
-    online: "Online",
-    idle: "Idle",
-    dnd: "Do Not Disturb",
-    offline: "Offline",
-  };
+  const days: string[] = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  const months: string[] = [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec",
+  ];
 
   return (
-    <div className="bg-blue-600 text-white selection:text-black selection:bg-white text-center p-2 px-5 sticky top-0 z-[99]">
-      <code className={font.className}>
-        Status: <strong className="animate-pulse">{statusKey[discord]}</strong>{" "}
-        |{" "}
-      </code>
-      {spotify ? (
-        <code className={font.className}>
-          Listening to{" "}
-          <strong className="italic">
-            {spotify.song && spotify.song.split(" (").length > 0
-              ? spotify.song.split(" (")[0]
-              : spotify.song}
-          </strong>{" "}
-          by{" "}
-          <strong className="italic">
-            {spotify.artist && spotify.artist.split("; ").length >= 3
-              ? `${spotify.artist.split("; ")[0]} and others`
-              : spotify.artist}
-          </strong>
-          <a
-            href={`https://open.spotify.com/track/${spotify.track_id}`}
-            className="mx-5 underline underline-offset-2 active:opacity-50 hover:opacity-75"
-          >
-            Play ↗
-          </a>
-        </code>
-      ) : (
-        <code className={font.className}>Not Listening to Spotify</code>
-      )}
+    <div className="bg-blue-600 text-white selection:text-black selection:bg-white text-center px-5 sticky top-0 z-[99]">
+      <HeaderItem>hey 👋</HeaderItem>|
+      <HeaderItem>
+        {days[date.getDay()]} {months[date.getMonth()]} {date.getDate()}
+      </HeaderItem>
+      <HeaderItem>
+        {date.getHours() % 12 == 0 ? 12 : date.getHours() % 12}:
+        {date.getMinutes()} {date.getHours() >= 12 ? "pm" : "am"}
+      </HeaderItem>
     </div>
   );
+}
+
+function HeaderItem({ children }: { children?: React.ReactNode }) {
+  return <code className={`${font.className} px-2`}>{children}</code>;
 }
