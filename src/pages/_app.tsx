@@ -21,11 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Yo, you found my website :)" />
       </Head>
 
-      <Header
-        initialFillIsDone={initialFillIsDone}
-        fillStateHook={setInitialFillDone}
-        trafficlight={trafficlight}
-      />
+      <Header />
 
       <div className="selection:bg-blue-500 selection:text-white min-h-screen mx-auto max-w-[1000px] mt-10">
         <Component {...pageProps} />
