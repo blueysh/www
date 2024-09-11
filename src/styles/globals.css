@@ -50,42 +50,35 @@ body {
 }
 
 h1 {
-    font-family: "Space Grotesk", sans-serif;
     font-size: 48px;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 h2 {
-    font-family: "Space Grotesk", sans-serif;
     font-size: 36px;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 h3 {
-    font-family: "Recia Semi", sans-serif;
     font-size: 24px;
     opacity: 80%;
 }
 
 h4 {
-    font-family: "Recia Semi", sans-serif;
     font-size: 20px;
 }
 
 h5 {
-    font-family: "Space Grotesk", sans-serif;
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 p {
-    font-family: "Recia Regular", sans-serif;
     font-size: 18px;
     opacity: 75%;
 }
 
 button {
-    font-family: "Space Grotesk", sans-serif;
     font-size: 16px;
 }
 

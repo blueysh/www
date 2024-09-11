@@ -1,10 +1,13 @@
 import { PrimaryButton, SecondaryButton } from "@/components/button";
 import Card from "@/components/card";
+import { DM_Sans } from "next/font/google";
+
+const font = DM_Sans({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main>
-      <section className="p-5">
+      <section className="p-5 tracking-tight">
         <span className="flex flex-row space-x-2">
           <img
             src="https://pbs.twimg.com/profile_images/1771200275203715072/_VWQfbuN_400x400.jpg"
@@ -12,7 +15,9 @@ export default function Home() {
             className="rounded-full scale-[80%] text-center bg-blue-600 text-white w-[96px] h-[96px] border-4 border-blue-500 shadow-2xl hover:rotate-[-10deg] transition-all duration-100"
           />
           <div className="flex flex-col mb-5">
-            <h2 className="my-auto pt-[5px]">Jan Santiago 🇵🇷</h2>
+            <h2 className={`my-auto pt-[5px] tracking-tighter`}>
+              Jan Santiago 🇵🇷
+            </h2>
             <h4 className="opacity-80 text-md">CS Student, Class of 2025</h4>
           </div>
         </span>
@@ -40,10 +45,10 @@ export default function Home() {
               "https://docs.google.com/document/d/1QEXFCTEdLbsXSvgLlJ6LAgW--SwMtjUYpzziAngL5nw/edit?usp=sharing")
           }
         >
-          Open Resume ↗
+          Open Resume <span className="font-sans">↗</span>
         </SecondaryButton>
       </section>
-      <section className="p-5">
+      <section className="p-5 tracking-tight">
         <h3>Contact</h3>
         <p className="mt-2">
           <a
@@ -76,7 +81,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="p-5">
+      <section className="p-5 tracking-tight">
         <h3>
           Projects{" "}
           <span className="opacity-50 text-xl">(scroll left and right)</span>
@@ -96,6 +101,7 @@ export default function Home() {
               onClick={() =>
                 (location.href = "https://github.com/discord-jar/discord.jar")
               }
+              className=""
             >
               See on GitHub
             </PrimaryButton>
